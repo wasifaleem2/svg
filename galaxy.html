@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <title>svg</title>
+    <link rel="stylesheet" href="galaxy.css">
+    <title>SVG Galaxy</title>
   </head>
-  <body style="overflow-y: hidden;overflow-x: hidden;">
+  <body>
     <!-- background-image:radial-gradient( rgb(0, 0, 75),#4558e9); -->
     <div class="main">
         <svg class="main-svg" height="100%" width="100%">
@@ -18,8 +18,8 @@
                 circle.setAttributeNS(null, "cy", Math.random() * 1000);
                 circle.setAttributeNS(null, "r", Math.random()-0.4);
                 circle.setAttributeNS(null, "fill", "rgb(240, 223, 180)");
+                circle.setAttributeNS(null, "class", "circle-class");
                 <!-- circle.setAttributeNS(null, "stroke", "white"); -->
-                circle.setAttributeNS(null, "stroke-width", 1);
                 document.querySelector("svg").appendChild(circle);
               }
             </script>
@@ -37,7 +37,9 @@
               keyTimes="0;1"
             /> -->
           </svg>
+          <div class="moon"></div>
           <div class="rocket"></div>
+
           
     </div>
   </body>

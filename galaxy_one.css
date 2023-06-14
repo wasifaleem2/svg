@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    color: rgb(240, 223, 180);
+}
+.main-svg{
+    background-color: transparent; 
+    height:100vh; 
+    max-width:auto;
+    overflow: auto;
+    background-image: radial-gradient(circle at bottom right, #0a0e3f 20%, #2d195d 40%, #461f74 70%, #642b8f 100%);
+    /* animation-name: zoomin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+}
+@keyframes zoomin {
+    0%{
+        scale: 1.2;  
+    }
+    25%{
+        scale: 7;
+    }
+    50%{
+        scale: 10;
+    }
+}
+.circle-class{
+    fill: white;
+    stroke-width: 1;
+    width: 10px;
+    height: 10px
+}
+.stars{
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    /* height: 0.5px;
+    width: 0.5px; */
+    border-radius: 50%;
+}
+.stars-bright{
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    height: 0.5px;
+    width: 0.5px;
+    border-radius: 50%;
+    animation-name: shine;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes shine {
+    0%{
+        background-color: blanchedalmond;
+        height: 0.5px;
+        width: 0.5px;
+    }
+    50%{
+        background-color: white;
+        height: 1.5px;
+        width: 1.5px;
+    }
+}
+.rocket{
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    z-index: 2;
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px -5px #333;
+    transform: rotate(-45deg);
+    animation-name: rocket;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rocket {
+    0%{
+        top: 0px;
+        left: 30px;
+    }
+    70%{
+        top: 100%;
+        left: 105%;
+    }
+    71%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}

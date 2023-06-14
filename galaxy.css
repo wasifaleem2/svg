@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    color: rgb(240, 223, 180);
+}
+.main-svg{
+    background-color: transparent; 
+    height:100vh; 
+    max-width:auto;
+    overflow: auto;
+    background-image: radial-gradient(circle at bottom right, #030408 20%, #0b1e39 40%, #216992 70%, #FFFFFF 100%);
+    /* animation-name: zoomin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+}
+@keyframes zoomin {
+    0%{
+        scale: 1.2;  
+    }
+    25%{
+        scale: 7;
+    }
+    50%{
+        scale: 10;
+    }
+}
+.circle-class{
+    fill: white;
+    stroke-width: 1;
+    width: 10px;
+    height: 10px
+}
+.rocket{
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    z-index: 2;
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px -5px #333;
+    transform: rotate(-45deg);
+    animation-name: rocket;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rocket {
+    0%{
+        top: 0px;
+        left: 30px;
+    }
+    70%{
+        top: 100%;
+        left: 105%;
+    }
+    71%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.moon {
+    /* z-index: 3;
+    width: 200px;
+    height: 200px;
+    background-color: #dc4141;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    animation: rotate 10s infinite linear; */
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    /* background-color: rgb(228, 202, 194); */
+    background-image: radial-gradient(circle at bottom center, rgb(201, 175, 175) 30%, rgb(216, 199, 199) 60%, #FFFFFF 100%);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation-name: moonshine;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: rotateX(15deg) rotateY(15deg);
+  }
+  @keyframes moonshine {
+    0%{
+        opacity: 1;
+        box-shadow: 0 white;
+    }
+    /* 70%{
+        top: 100%;
+        left: 105%;
+    }
+    71%{
+        opacity: 0;
+    } */
+    50%{
+        opacity: 0.8;
+        box-shadow: 5px red;
+    }
+}
