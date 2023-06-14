@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      canvas.width = 600;
+      canvas.height = 400;
+      var x = 0;
+      var rectWidth = 50;
+      var rectHeight = 50;
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "red";
+        ctx.fillRect(x, 50, rectWidth, rectHeight);
+        x += 5;
+        if (x > canvas.width) {
+          x = -rectWidth;
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+  </body>
+</html>

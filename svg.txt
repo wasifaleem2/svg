@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svg</title>
+  </head>
+  <body style="background-color: wheat">
+    <div>
+        <svg height="100vh" width="100px" style="background-color: transparent; margin:20px; max-height:100vh; max-width:auto">
+            <!-- <polygon
+              points="50,2 20,98 94,38 6,38 80,98"
+              style="fill: white; stroke: rgb(228, 228, 228); stroke-width: 2"
+            /> -->
+            <!-- <polygon
+              points="50,0 64,36 100,36 70,60 82,96 50,76 18,96 30,60 0,36 36,36"
+              style="fill: #ffffff; stroke: #c4c4c4; stroke-width: 2"
+            /> -->
+      
+            <!-- <polygon
+              points="25,0 32,18 50,18 35,30 41,48 25,38 9,48 15,30 0,18 18,18"
+              style="fill: #ffffff; stroke: #c4c4c4; stroke-width: 1"
+            />
+      
+            <polygon
+              points="125,100 132,118 150,118 135,130 141,148 125,138 109,148 115,130 100,118 118,118"
+              style="fill: #ffffff; stroke: #c4c4c4; stroke-width: 1"
+            />
+      
+            <polygon
+              points="125,0 132,18 150,18 135,30 141,48 125,38 109,48 115,30 100,18 118,18"
+              style="fill: #ffffff; stroke: #c4c4c4; stroke-width: 1"
+            /> -->
+      
+            <!-- <circle
+              cx="300"
+              cy="50"
+              r="10"
+              fill="silver"
+              stroke="none"
+              stroke-width="1"
+            /> -->
+      
+            <script>
+              console.log(Math.random()*10)
+              for (let i = 1; i < 1000; i++) {
+                  let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                  circle.setAttributeNS(null, "cx", Math.random() * 1000);
+                  circle.setAttributeNS(null, "cy", Math.random() * 400);
+                  circle.setAttributeNS(null, "r", Math.round(Math.random()));
+                  circle.setAttributeNS(null, "fill", "white");
+                  circle.setAttributeNS(null, "stroke", "none");
+                  circle.setAttributeNS(null, "stroke-width", 1);
+                  document.querySelector("svg").appendChild(circle);
+              }
+          </script>
+      
+      
+            <animateTransform
+              attributeType="xml"
+              attributeName="transform"
+              type="scale"
+              from="0.1"
+              to="2"
+              dur="3s"
+              repeatCount="indefinite"
+              additive="sum"
+              calcMode="spline"
+              keySplines="0.5 0.1 0.5 1"
+              keyTimes="0;1"
+            />
+          </svg>
+    </div>
+  </body>
+</html>

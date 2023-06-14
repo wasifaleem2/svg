@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    color: rgb(240, 223, 180);
+}
+.main-svg{
+    background-color: transparent; 
+    height:100vh; 
+    max-width:auto;
+    overflow: auto;
+    /* background-image:radial-gradient( rgb(63, 0, 63), rgb(19, 19, 70)); */
+    /* background-image:radial-gradient(circle at center, rgb(137, 64, 0) 5%, rgb(137, 107, 0) 10%, black 80%); */
+    /* background-image: radial-gradient(circle at center, #0a0e3f, #2d195d, #461f74, #642b8f); */
+    background-image: radial-gradient(circle at bottom right, #030408 20%, #0b1e39 40%, #216992 70%, white 100%);
+
+
+
+
+    /* animation-name: zoomin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+}
+@keyframes zoomin {
+    0%{
+        scale: 1.2;
+    /* background-image: radial-gradient(circle at bottom right, #030408 10%, #0b1e39 20%, #216992 30%, white 100%); */
+        
+    }
+    25%{
+        scale: 7;
+    /* background-image: radial-gradient(circle at bottom right, #030408 20%, #0b1e39 40%, #216992 70%, white 100%); */
+
+    }
+    50%{
+        scale: 10;
+    /* background-image: radial-gradient(circle at bottom right, #030408 35%, #0b1e39 65%, #216992 90%, white 100%); */
+
+    }
+}
+.rocket{
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    z-index: 2;
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px -5px #333;
+    transform: rotate(-45deg);
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0%{
+        top: 0px;
+        left: 30px;
+    }
+    /* 30%{
+        top: 30%;
+        left: 30%;
+    }
+    65%{
+        top: 65%;
+        left: 65%;
+    } */
+    100%{
+        top: 100%;
+        left: 105%;
+    }
+}

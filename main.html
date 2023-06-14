@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .red-color {
+        color: red;
+      }
+    </style>
+    <script>
+      const button = document.getElementById("color-button");
+      button.addEventListener("click", function () {
+        document.execCommand("foreColor", false, "red");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="text-editor" contentEditable="true">
+      <p>This is some text in the editor.</p>
+    </div>
+    <button id="color-button">color</button>
+  </body>
+</html>
